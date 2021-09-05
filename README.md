@@ -75,7 +75,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Project Name
 
-**Author**: Your Name Goes Here
+**Author**: ahmad abuteifor 
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -98,12 +98,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-Name of feature: ________________________________
+Name of feature: _________making the form _______________________
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: ___1 hours __
 
-Start time: _____
+Start time: _1:30pm ____
 
-Finish time: _____
+Finish time: _2:25pm____
 
-Actual time needed to complete: _____
+Actual time needed to complete: _____45 minutes 
+
+
+Name of feature: _________render the location  _______________________
+
+Estimate of time needed to complete: ___3 hours __
+
+Start time: _2:45pm  ____
+
+Finish time: _4pm ____
+
+Actual time needed to complete: _____90 minutes   
+
+
+
+Name of feature: _________map img and style   _______________________
+
+Estimate of time needed to complete: ___1  hours __
+
+Start time: _4:05pm  ____
+
+Finish time: _4:40pm ____
+
+Actual time needed to complete: 35  minutes   

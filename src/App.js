@@ -12,7 +12,8 @@ class App extends React.Component {
       nameOflocation: '',
       // mapLocation: '',
       locationdetails: false,
-      wetherDeatales:[]
+      wetherDeatales:[],
+      movieDeatels:[]
     }
   }
 
@@ -34,17 +35,22 @@ class App extends React.Component {
     console.log(url);
 
 
-    const serverUrl=`${process.env.REACT_APP_SERVER_URL}/weathers?&city_name=${this.state.nameOflocation}`
+    const serverUrl=`${process.env.REACT_APP_SERVER_URL}/weathers?&city=${this.state.nameOflocation}`
+const movieUrl=`${process.env.REACT_APP_SERVER_URL}/movies?query=${this.state.nameOflocation}`
+  
 
     const theResponse = await axios.get(url);
 
     const serverResponse=await axios.get(serverUrl);
+    const movieResponse=await axios.get(movieUrl);
+
     console.log(theResponse.data[0]);
 
     this.setState({
       nameOflocation: theResponse.data[0],
       locationdetails: true,
-      wetherDeatales: serverResponse
+      wetherDeatales: serverResponse.data,
+      movieDeatels:movieResponse.data
     })
 
    
@@ -67,9 +73,15 @@ class App extends React.Component {
       fontFamily: "Arial"
 
     }
+    console.log(this.state);
 
-    let weatherstuff=this.state.wetherDeatales.map(item=>{
+    const weatherstuff=this.state.wetherDeatales.map(item=>{
       return <p>{item.date}:{item.description}</p>
+    })
+    const movieStuff=this.state.movieDeatels.map(item=>{
+      return <p> titele: {item.title} 
+      overview: {item.overview}  
+      vote rate: {item.vote}</p>
     })
   
 
@@ -92,6 +104,7 @@ class App extends React.Component {
   <img  style={pStyle}src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${this.state.nameOflocation.lat},${this.state.nameOflocation.lon}&zoom=1-18`} alt=""/>
 
   <p>{weatherstuff}</p>
+  <p>{movieStuff}</p>
 
 
 

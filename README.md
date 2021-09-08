@@ -1,3 +1,50 @@
+
+# Project Name node and express 
+ **Author**:ahmad abuteifor
+**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+
+
+## Overview
+bulding a appliction that let the others get the loction and the wether and the movie depend in the name of the city and lat and lon 
+
+![](./img/planningLab06.PNG)
+## Getting Started
+ 1- Creating Repo 2- Creating react app   3-Use API to request and take DAta from 4-Making API useing express and node js 5- install nodemon  6- using api for move and weatherbit 7- installl dontev and other packege 
+
+ ## Architecture
+i used the react app , bootstrab ,node js 
+
+## Credit and Collaborations
+Ammani musa 
+helped from TAs 
+asle w3school 
+
+
+
+Name of feature: using the URL
+
+Estimate of time needed to complete: __3 hours___
+
+Start time: _1pm ____
+
+Finish time: _5pm ____
+
+Actual time needed to complete: ___4 hours__
+
+
+
+i worked from 2 pm to 8 pm 
+
+somt time i worked in the night 
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,61 +119,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-
-# Project Name
-
-**Author**: ahmad abuteifor 
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
-
-## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-
-## Credit and Collaborations
-
-
-
-
-
-Name of feature: _________making the form _______________________
-
-Estimate of time needed to complete: ___1 hours __
-
-Start time: _1:30pm ____
-
-Finish time: _2:25pm____
-
-Actual time needed to complete: _____45 minutes 
-
-
-Name of feature: _________render the location  _______________________
-
-Estimate of time needed to complete: ___3 hours __
-
-Start time: _2:45pm  ____
-
-Finish time: _4pm ____
-
-Actual time needed to complete: _____90 minutes   
-
-
-
-Name of feature: _________map img and style   _______________________
-
-Estimate of time needed to complete: ___1  hours __
-
-Start time: _4:05pm  ____
-
-Finish time: _4:40pm ____
-
-Actual time needed to complete: 35  minutes   

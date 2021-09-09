@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       nameOflocation: '',
+      locationData:{},
       locationdetails: false,
       wetherDeatales: [],
       movieDeatels: []
@@ -18,6 +19,7 @@ class App extends React.Component {
   forChange = (e) => {
     this.setState({
       nameOflocation: e.target.value
+
     })
 
     console.log(e.target.value);
@@ -33,25 +35,63 @@ class App extends React.Component {
     console.log(url);
 
 
-    const serverUrl = `${process.env.REACT_APP_SERVER_URL}/weathers?&city=${this.state.nameOflocation}`
-    const movieUrl = `${process.env.REACT_APP_SERVER_URL}/movies?query=${this.state.nameOflocation}`
+    // const serverUrl = `${process.env.REACT_APP_SERVER_URL}/weathers?&city=${this.state.nameOflocation}`
+        
 
 
     const theResponse = await axios.get(url);
 console.log(theResponse);
+
+
+this.setState({
+  locationData: theResponse.data[0],})
+
+  console.log(this.state.locationData);
+
+  const serverUrl = `${process.env.REACT_APP_SERVER_URL}/weathers?lat=${this.state.locationData.lat}&lon=${this.state.locationData.lon}`;
+
+  const movieUrl = `${process.env.REACT_APP_SERVER_URL}/movies?query=${this.state.nameOflocation}`
+
     const serverResponse = await axios.get(serverUrl);
+
+    console.log(serverResponse.data);
     const movieResponse = await axios.get(movieUrl);
 
 
-    console.log(theResponse.data[0]);
-
+    
     this.setState({
-      nameOflocation: theResponse.data[0],
+      // locationData: theResponse.data[0],
       wetherDeatales: serverResponse.data,
       movieDeatels: movieResponse.data,
       locationdetails: true,
 
     })
+
+
+
+
+    
+// await axios.get(url).then(locationIqResponse => {
+
+//       const locationIqData = locationIqResponse.data[0];
+
+//       this.setState({
+//         locationData: locationIqData
+//       });
+
+//       const serverUrl = `${process.env.REACT_APP_SERVER_URL}/weathers?lat=${locationIqData.lat}&lon=${locationIqData.lon}`;
+
+//       axios.get(serverUrl).then(weatherResponse => {
+
+//         this.setState({
+//           wetherDeatales: weatherResponse.data,
+//           locationdetails: true
+
+//         });
+
+//       });
+
+//     });
 
 
   }
@@ -65,14 +105,7 @@ console.log(theResponse);
     }
     console.log(this.state.wetherDeatales);
 
-    // const weatherstuff = this.state.wetherDeatales.map(item => {
-    //   return <p>{item.date}:{item.description}</p>
-    // })
-    // const movieStuff = this.state.movieDeatels.map(item => {
-    //   return <p> titele: {item.title}
-    //     overview: {item.overview}
-    //     vote rate: {item.vote}</p>
-    // })
+    
 
 
     return (
@@ -93,35 +126,6 @@ console.log(theResponse);
             movieDeatels={this.state.movieDeatels}
           />
         }
-
-
-
-
-        {/* {
-          this.state.locationdetails &&
-          <div>
-            <h2 style={{ color: "red" }}>Location Info </h2>
-            <p style={pStyle} > location {this.state.nameOflocation.display_name}</p>
-            <p style={pStyle}>lat :{this.state.nameOflocation.lat}</p>
-            <p style={pStyle}>lon :{this.state.nameOflocation.lon}</p>
-            <img style={pStyle} src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_KEY}&center=${this.state.nameOflocation.lat},${this.state.nameOflocation.lon}&zoom=1-18`} alt="" />
-
-            <p>{weatherstuff}</p>
-            <p>{movieStuff}</p>
-
-
-
-
-
-
-
-
-
-
-          </div>
-
-
-        } */}
 
 
 

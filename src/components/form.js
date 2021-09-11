@@ -1,13 +1,18 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Button from 'react-bootstrap/Button'
 
 
 
 class Formlocation extends React.Component{
     render(){
+
+
+
 return(
-    <Form style={{margin:'18rem'}} onSubmit={this.props.forSubmit}>
+    <Form style={{margin:'6rem'}} onSubmit={this.props.forSubmit}>
     <Form.Group className="mb-3" controlId="formBasicEmail"   >
       <Form.Label > location name </Form.Label>
       <Form.Control type="text" placeholder="address" onChange={this.props.forChange} />
@@ -18,7 +23,7 @@ return(
 
 
 
-    <Button variant="primary" type="submit" style={{ color: "black" }, { backgroundColor: "blue" }} >
+    <Button variant="primary" type="submit" style={{width:'10rem'}} >
       Explor
     </Button>
   </Form>
